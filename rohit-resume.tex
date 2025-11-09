@@ -1,0 +1,154 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+
+% Page geometry
+\geometry{margin=0.7in}
+
+% Colors
+\definecolor{primaryblue}{RGB}{26,115,232}
+\definecolor{textgray}{RGB}{60,64,67}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primaryblue,
+    urlcolor=primaryblue,
+    citecolor=primaryblue
+}
+
+% Section formatting
+\titleformat{\section}
+  {\large\bfseries\color{textgray}}
+  {}
+  {0em}
+  {}
+  [\titlerule]
+
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+% Remove page numbers
+\pagestyle{empty}
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\Huge\bfseries Rohit Kumar}\\[0.5em]
+    \faPhone\ (555) 123-4567 \quad
+    \faEnvelope\ \href{mailto:rohit.kumar@email.com}{rohit.kumar@email.com} \quad
+    \faLinkedin\ \href{https://linkedin.com/in/rohit-kumar}{linkedin.com/in/rohit-kumar} \quad
+    \faGithub\ \href{https://github.com/rohit-kumar}{github.com/rohit-kumar} \quad
+    \faGlobe\ \href{https://rohitkumar.dev}{rohitkumar.dev}
+\end{center}
+
+\vspace{0.5em}
+
+% Education
+\section{Education}
+\begin{itemize}[leftmargin=*]
+  \resumeSubheading
+    {Bachelor of Technology in Computer Science}{GPA: 3.8/4.0}
+    {Indian Institute of Technology (IIT)}{2020 -- 2024}
+  \resumeSubItem{Relevant Coursework: Data Structures, Algorithms, Machine Learning, Database Systems, Operating Systems, Computer Networks}
+  \resumeSubItem{Dean's List: Fall 2021, Spring 2022, Fall 2023}
+\end{itemize}
+
+\vspace{-8pt}
+
+% Experience
+\section{Experience}
+\begin{itemize}[leftmargin=*]
+  \resumeSubheading
+    {Software Engineering Intern}{June 2023 -- August 2023}
+    {Google, Mountain View, CA}{}
+  \resumeSubItem{Developed scalable microservices using Python and Go, improving API response time by 35\% and handling 10M+ requests daily}
+  \resumeSubItem{Built distributed caching system using Redis, reducing database load by 40\% and improving system throughput}
+  \resumeSubItem{Collaborated with cross-functional teams to design and implement new features for Google Cloud Platform services}
+  \resumeSubItem{Optimized SQL queries and database schemas, resulting in 50\% reduction in query execution time}
+
+  \resumeSubheading
+    {Full Stack Developer Intern}{January 2023 -- May 2023}
+    {Tech Startup Inc., Remote}{}
+  \resumeSubItem{Built responsive web application using React, TypeScript, and Node.js, serving 50K+ active users}
+  \resumeSubItem{Implemented RESTful APIs and GraphQL endpoints, improving data fetching efficiency by 30\%}
+  \resumeSubItem{Designed and developed PostgreSQL database schema, ensuring data integrity and optimal performance}
+  \resumeSubItem{Deployed applications on AWS using Docker and Kubernetes, achieving 99.9\% uptime}
+
+  \resumeSubheading
+    {Machine Learning Research Assistant}{September 2022 -- December 2022}
+    {IIT Research Lab}{}
+  \resumeSubItem{Researched and implemented deep learning models for natural language processing using PyTorch}
+  \resumeSubItem{Published research paper on transformer architectures at NeurIPS 2023 (co-author)}
+  \resumeSubItem{Developed data preprocessing pipelines and model evaluation frameworks, improving model accuracy by 15\%}
+\end{itemize}
+
+\vspace{-8pt}
+
+% Projects
+\section{Projects}
+\begin{itemize}[leftmargin=*]
+  \resumeSubheading
+    {Distributed Task Scheduler}{}
+    {\href{https://github.com/rohit-kumar/task-scheduler}{github.com/rohit-kumar/task-scheduler} | Go, Redis, PostgreSQL}{}
+  \resumeSubItem{Built fault-tolerant distributed system for scheduling and executing tasks across multiple workers}
+  \resumeSubItem{Implemented leader election and consensus algorithms, ensuring high availability and consistency}
+  \resumeSubItem{Designed REST API and WebSocket interface for real-time task monitoring and management}
+
+  \resumeSubheading
+    {AI-Powered Code Review Assistant}{}
+    {\href{https://github.com/rohit-kumar/code-review-ai}{github.com/rohit-review-ai} | Python, FastAPI, OpenAI API}{}
+  \resumeSubItem{Developed intelligent code review system using GPT-4 API, analyzing code quality and suggesting improvements}
+  \resumeSubItem{Built FastAPI backend with async processing, handling 1000+ code reviews per hour}
+  \resumeSubItem{Integrated with GitHub API for seamless workflow integration and real-time notifications}
+
+  \resumeSubheading
+    {Real-time Chat Application}{}
+    {\href{https://github.com/rohit-kumar/chat-app}{github.com/rohit-kumar/chat-app} | React, Node.js, Socket.io, MongoDB}{}
+  \resumeSubItem{Created scalable real-time messaging platform supporting 10K+ concurrent users}
+  \resumeSubItem{Implemented end-to-end encryption, message persistence, and file sharing capabilities}
+  \resumeSubItem{Deployed on AWS with auto-scaling, load balancing, and CDN integration}
+\end{itemize}
+
+\vspace{-8pt}
+
+% Technical Skills
+\section{Technical Skills}
+\begin{itemize}[leftmargin=*]
+  \resumeSubItem{\textbf{Languages:} Python, Java, C++, JavaScript, TypeScript, Go, SQL}
+  \resumeSubItem{\textbf{Frameworks \& Libraries:} React, Node.js, Express, FastAPI, Django, PyTorch, TensorFlow, Spring Boot}
+  \resumeSubItem{\textbf{Tools \& Technologies:} Git, Docker, Kubernetes, AWS, GCP, Redis, PostgreSQL, MongoDB, Kafka, Elasticsearch}
+  \resumeSubItem{\textbf{Concepts:} Distributed Systems, System Design, Machine Learning, Data Structures \& Algorithms, REST APIs, Microservices}
+\end{itemize}
+
+\vspace{-8pt}
+
+% Awards & Achievements
+\section{Awards \& Achievements}
+\begin{itemize}[leftmargin=*]
+  \resumeSubItem{Google Hash Code 2023 -- Finalist (Top 100 globally)}
+  \resumeSubItem{ACM ICPC Regional Contest 2022 -- Qualified for World Finals}
+  \resumeSubItem{LeetCode Contest Rating: 2100+ (Top 5\% globally)}
+  \resumeSubItem{Published 2 research papers in top-tier ML conferences (NeurIPS, ICML)}
+\end{itemize}
+
+\end{document}
